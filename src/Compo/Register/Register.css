@@ -1,0 +1,68 @@
+/* register Page */
+.register_div {
+    width: 400px;
+    margin: auto;
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+}
+.register_div h3{
+    margin-bottom: 20px;
+}
+.form-group input {
+    padding: 5%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 65px;
+}
+.check-container{
+    display: flex;
+}
+
+
+.form-check input{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+
+}
+
+.form-checknotice {
+    display: inline-block;
+    width: 80%;
+    font-size: medium;
+}
+
+.reg_submit {
+    width: 100%;
+    padding: 4%;
+    font-size: large;
+    font-weight: bold;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+}
+
+.fontsi {
+    font-size: small;
+}
+
+.navdeco {
+    text-align: center;
+    font-size: 0.95em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 0;
+
+}
+
+.loginspan {
+    color: blueviolet;
+    text-decoration: underline;
+    font-size: 1.1em;
+    font-weight: bold;
+}
