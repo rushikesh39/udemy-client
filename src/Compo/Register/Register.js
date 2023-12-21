@@ -3,42 +3,37 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "../Footer";
 import axios from "axios";
 import "./Register.css";
-import { jwtDecode } from "jwt-decode";
+// import { jwtDecode } from "jwt-decode";
 
 function Register() {
-  const navi = useNavigate();
+  const navigate = useNavigate();
   const [data, setData] = useState({
-    name: "",
+    uname: "",
     email: "",
-    password: "",
+    pass: "",
   });
   const handleInput = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!data.name.trim()) {
+    if (!data.uname.trim()) {
       alert("Enter Name!\nIt is mandatory!!");
     } else if (!data.email.includes("@")) {
       alert("Enter valid email address!!");
-    } else if (!data.password.trim()) {
+    } else if (!data.pass.trim()) {
       alert("Enter Password!");
     } else {
       console.log(data);
-      axios
-        .post("https://udemy-server-i52o.onrender.com/register", data)
-        .then((res) => {
+      axios.post("https://udemyclone-backend.onrender.com/api/register", data) 
+      .then((res) => {
           console.log(res.data);
           alert(res.data.msg);
-          localStorage.setItem("token", res.data.token);
-          navi("/");
-          const decodedToken = jwtDecode(res.data.token);
-          console.log(decodedToken)
-        //   dispatch(setUser(decodedToken.userName));
-          setData({ name: "", email: "", password: "" });
-        })
-        .catch((err) => console.log(err));
-      setData({ name: "", email: "", password: "" });
+          alert("Please login!");
+          navigate("/login");
+      })
+      .catch(err => console.log(err));
+  setData({ uname: "", email: "", pass: "" });
     }
   };
   return (
@@ -50,10 +45,10 @@ function Register() {
             {/* <label htmlFor='uname'>Name</label> */}
             <input
               type="text"
-              name="name"
+              name="uname"
               id="name"
               placeholder="Enter name"
-              value={data.name}
+              value={data.uname}
               onChange={handleInput}
             />
           </div>
@@ -72,10 +67,10 @@ function Register() {
             {/* <label htmlFor='pass'>Password</label> */}
             <input
               type="password"
-              name="password"
+              name="pass"
               id="password"
               placeholder="Enter Password"
-              value={data.password}
+              value={data.pass}
               onChange={handleInput}
             />
           </div>

@@ -10,7 +10,7 @@ import "./Login.css"
 function Login() {
     const [data, setData] = useState({
         email: "",
-        password: ""
+        pass: ""
     })
     const navigate = useNavigate();
     const handleInput = (event) => {
@@ -21,23 +21,23 @@ function Login() {
         if ((!data.email.includes("@"))) {
             alert("Enter valid email address!!")
         }
-        else if (!data.password.trim()) {
+        else if (!data.pass.trim()) {
             alert("Enter Password!")
         }
         else {
             console.log(data);
-            axios.post("https://udemy-server-i52o.onrender.com/login", data) 
-                .then((res) => {
-                    alert(res.data.msg);
-                    if (res.data.msg === "Success") {
-                        localStorage.setItem("token", res.data.token);
-                        // console.log(res.data.userdetail)
-                        navigate("/");
-                        setData({ email: "", password: "" })
-                    }
-                })
-                .catch(err => console.log(err));
-            setData({ email: "", password: "" })
+            axios.post("https://udemyclone-backend.onrender.com/api/login", data) 
+            .then((res) => {
+                alert(res.data.msg);
+                if (res.data.msg === "User Logged in Successfully!") {
+                    localStorage.setItem("token", res.data.token);
+                    console.log(res.data.userdetail)
+                    navigate("/");
+                    window.location.reload(true)
+                }
+            })
+            .catch(err => console.log(err));
+        setData({ email: "", pass: "" })
         }
     }
     return (
@@ -69,7 +69,7 @@ function Login() {
                     </div>
                     <div className='form-group'>
                         {/* <label htmlFor='pass'>Password</label> */}
-                        <input type='password' name='password' id='pass' placeholder='Password' value={data.password} onChange={handleInput} />
+                        <input type='password' name='pass' id='pass' placeholder='Password' value={data.pass} onChange={handleInput} />
                     </div>
 
                     <button className='reg_submit' onClick={handleSubmit}>Log in</button>

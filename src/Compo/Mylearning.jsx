@@ -13,7 +13,7 @@ function Mylearning() {
     useEffect(() => {
         const fetchBoughtCourses = async () => {
             try {
-                const response = await axios.get(`https://udemy-server-i52o.onrender.com/api/getboughtcourses?userID=${userID}`); 
+                const response = await axios.get(`https://udemyclone-backend.onrender.com/api/getboughtcourses?userID=${userID}`); 
                 if (response.data.success) {
                     setBoughtCourses(response.data.boughtCourses);
                 } else {

@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { resetCart } from "../Cart/Redux/CartSlice";
 import { FaRegHeart } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
+// import { jwtDecode } from "jwt-decode";
 
 function NavbarCompo() {
   const [isDropDown, setIsDropDown] = useState(false);
@@ -20,12 +21,35 @@ function NavbarCompo() {
   const [searchText, setSearchText] = useState("");
   const [isLoggedIn, setlogged] = useState(false);
   const [userinfo, setUserInfo] = useState(null);
+  // const [userFlatter,setUserFlatter]=useState(null)
+
+ 
 
   function handleParentChild(){
     setParent(!isParent)
     setChild(!isChild)
   }
   const token = localStorage.getItem("token");
+  // useEffect(() => {
+  //   try {
+  //     const decodedToken = jwtDecode(token);
+
+  //     if (decodedToken) {
+  //       console.log('Decoded Token:', decodedToken);
+  //       const email=decodedToken.email;
+  //       console.log(email)
+  //       const firstLetter = email.charAt(0).toUpperCase();
+  //       console.log(firstLetter)
+  //       setUserFlatter(firstLetter)
+  //       setlogged(true);
+  //       // Now you can access the decoded information in decodedToken
+  //     } else {
+  //       console.error('Invalid Token');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error decoding token:', error.message);
+  //   }
+  // }, [token]);
   const dispatch = useDispatch();
   const itemsInCart = useSelector((state) => state.cart.itemsInCart);
   const navi = useNavigate();
@@ -46,7 +70,7 @@ function NavbarCompo() {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `https://udemy-server-i52o.onrender.com/data/search?searchText=${searchText}`
+        `https://udemyclone-backend.onrender.com/data/search?searchText=${searchText}`
       );
       const searchResult = response.data;
       console.log(response.data);
@@ -76,9 +100,7 @@ function NavbarCompo() {
   useEffect(() => {
     if (token) {
       axios
-        .get("https://udemy-server-i52o.onrender.com/api/auth", {
-          headers: { authorization: `Bearer ${token}` },
-        }) 
+        .get("https://udemyclone-backend.onrender.com/api/auth", { headers: { "authorization": `Bearer ${token}` } }) 
         .then((res) => {
           console.log(res.data.msg);
           console.log(res.data.userdata);
@@ -283,7 +305,10 @@ function NavbarCompo() {
             onMouseLeave={() => setlogroute(false)}
           >
             <div className="profilediv">
-              <span className="spanclass">{userinfo.uname.charAt(0)}</span>
+            <span className="spanclass">
+  {userinfo?.uname?.charAt(0) }
+</span>
+
             </div>
             {showlogroute && (
               <div className="logroute">

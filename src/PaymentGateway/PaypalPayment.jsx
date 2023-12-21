@@ -18,8 +18,8 @@ function PaypalPayment({ cartData, totalAmount }) {
 
     const storeCourseData = (cartData) => {
         const userData = localStorage.getItem("userID");
-        axios.post("https://udemy-server-i52o.onrender.com/api/coursesbought",
-            { cartData, userData })
+        axios.post("https://udemyclone-backend.onrender.com/api/coursesbought",
+        { cartData, userData })
             .then((res) => {
                 console.log(res.data)
             })
