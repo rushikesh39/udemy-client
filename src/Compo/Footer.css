@@ -1,20 +1,21 @@
 /* footer */
 .footer {
     background-color: rgb(27, 26, 26);
-    height: 40vh;
-    position: relative;
-    padding-top: 2%;
+    
+   display: flex;
+   flex-wrap: wrap;
 }
 
 .footer_Upperdiv {
-    width: 50%;
+    width: 100%;
     /* border: 2px solid white; */
-    margin-left: 3%;
+    /* margin-left: 3%; */
     color: white;
     display: flex;
     flex-wrap: wrap;
     text-align: left;
     justify-content: space-between;
+    padding: 5px;
 }
 
 .footer_Upperdiv p {
@@ -24,11 +25,13 @@
 }
 
 .footerbutton {
-    position: absolute;
-    top: 10%;
-    right: 3%;
+    /* position: absolute; */
+    /* top: 10%;
+    right: 3%; */
     border: 1px solid white;
-    padding: 10px;
+    height: 40px;
+    padding: 5px;
+    margin: 10px 10px 0 0;
 }
 
 .langbut {
@@ -42,14 +45,19 @@
 }
 
 .footerlogo {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     /* border: 2px solid white; */
-    margin-top: 2%;
-    width: 95%;
-    margin-left: 2%;
+    padding: 5px;
+    /* margin-top: 10px;
+    
+    margin-left: 2%; */
 }
-
+.footerlogo .udemylogo {
+    width: 200px;
+}
 .copyrights {
     color: white;
     font-size: small;

@@ -1,6 +1,9 @@
 
 
 /* Image Carousel */
+.banner img{
+    width: 100vw;
+}
 .image-carousel {
     display: flex;
     justify-content: center;
@@ -98,17 +101,21 @@
 .mainlearnercard_div {
     /* border: 2px solid black; */
     margin: auto;
-    width: 88%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5px;
+    /* width: 1000px;    */
 }
 
 .learnercard_div {
     border: 1px solid rgb(178, 175, 175);
-    width: 26%;
+    width: 300px;
     background-color: white;
     padding: 25px;
     text-align: left;
+    margin: 5px;
 }
 
 .imgdouble {
@@ -136,8 +143,8 @@
 .profileround {
     border-radius: 50%;
     background-color: black;
-    width: 10%;
-    height: 4.5vh;
+    width: 30px;
+    height: 30px;
 }
 
 .profileround h5 {
@@ -160,26 +167,36 @@
 
 /* become instructor div */
 .becomeinstruc_div {
-    width: 88%;
+    width:100vw;
     /* border: 2px solid black; */
     margin: auto;
-    position: relative;
+    /* position: relative; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+     
 }
 
 .becomeinstruc_imgdiv {
-    width: 30%;
+    width: 300px;
+    height: 300px;
     /* border: 2px solid black; */
-    margin: 2% 0% 0% 17%;
+    margin:10px;
 }
 
 .becomeinstruc_contentdiv {
     /* border: 2px solid black; */
     /* margin-right: 5%; */
     text-align: left;
-    width: 30%;
-    position: absolute;
+    width:30vw;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 100px;
+    
+    /* position: absolute;
     top: 15%;
-    left: 55%;
+    left: 55%; */
 }
 
 .becomeinstruc_contentdiv p {
@@ -188,7 +205,7 @@
 }
 
 .becomeinstruc_contentdiv button {
-    padding: 4%;
+    padding: 10px 15px;
     font-size: 1em;
     font-weight: bold;
     color: white;
@@ -202,7 +219,7 @@
     padding: 10px;
     position: absolute;
     box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
-    left: 20rem;
+    left: 10%;
     top: 8rem;
     max-width: 25rem;
     display: flex;
@@ -226,6 +243,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    padding: 5px;
     
 }
 .brand-container p{
@@ -241,4 +259,19 @@
 ul {
     list-style-type: none;
   }
-  
+  @media (max-width:800px) {
+    .offer{
+        left: 5%;
+        top:5rem;
+        font-size: small;
+        width: 200px;
+    }
+    .becomeinstruc_div{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .becomeinstruc_contentdiv{
+        width: 80%;
+    }
+  }

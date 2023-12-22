@@ -27,11 +27,12 @@ function Footer() {
                     <p>Sitemap</p>
                     <p>Accessibility statement</p>
                 </div>
-            </div>
-            <div className='footerbutton'>
-                <MdLanguage size={"1.2em"} color='white' />
+                <div className='footerbutton'>
+                <MdLanguage  color='white' />
                 <span className='langbut'>English</span>
             </div>
+            </div>
+            
             <div className='footerlogo'>
                 <div className='udemylogo_div'>
                     <img src='https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg' alt='not found' />

@@ -129,11 +129,14 @@ nav{
     background-color: blueviolet;
     color: white;
     position: absolute;
-    width: 55%;
-    height: 3vh;
+    width:20px;
+    height: 20px;
     font-size: small;
     font-weight: bold;
     right: 0;
+    display: flex;
+    justify-content: center;
+    /* padding-top: 2px; */
 }
 
 .usernav {
@@ -149,8 +152,9 @@ nav{
     align-items: center;
     border-radius: 50%;
     box-sizing: border-box;
-    /* border: 2px solid red; */
-    height: 6vh;
+    width: 33px;
+    height: 33px;
+   
     background-color: #333;
 }
 

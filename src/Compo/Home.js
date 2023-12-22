@@ -125,6 +125,7 @@ function Home() {
                         <div className='imgdouble'>
                             <img src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg" alt='not found' className='imgfil' />
                         </div>
+                        <div>
                         <p className='learnertext'>I am proud to say that after a few months of taking this course...<span>I passed my exam and am now an AWS Certified Cloud Practitioner!</span> This content was exactly what the CCP exam covered.</p>
                         <div className='profile_learner'>
                             <div className='profileround'>
@@ -136,6 +137,7 @@ function Home() {
                         <div className='flexy'>
                             <MdPlayCircle color='rgb(22, 22, 179)' size={"3em"} />
                             <p className='playspan'>[NEW] Ultimate AWS Certified Cloud Practitioner - 2022</p>
+                        </div>
                         </div>
                     </div>
                     <div className='learnercard_div'>
