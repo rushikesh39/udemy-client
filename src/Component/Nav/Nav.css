@@ -1,0 +1,168 @@
+.ud-header{
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    background: #fff;
+    height: 4.2rem;
+    padding: 0 2.4rem;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo{
+    cursor: pointer;
+    
+}
+.categories{
+    /* padding-left: 10px; */
+    padding: 0px 10px 0 10px;
+    color: #2d2f31;
+    position: relative;
+}
+.udemy-business{
+    padding: 0px 10px 0 10px;
+    color: #2d2f31;
+}
+.udemy-tech{
+    padding: 0px 10px 0 10px;
+    color: #2d2f31;
+}
+.search-bar{
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    border: 1px solid black;
+    flex-grow: 1;
+    height: 2.8rem;
+    border: 1px solid #2d2f31;
+    border-radius: 9999px;
+    background-color: #f7f9fa;
+    margin: 0 1.2rem;
+}
+.search-bar label{
+    color: #2d2f31;
+   
+}
+.search-bar input{
+    padding-left: 20px;
+    border: none;
+   width: 100%;
+    background-color: #f7f9fa;
+    height: 2.8rem;
+    border-radius: 9999px;
+    outline: none;
+    /* border: 1px solid black; */
+    
+}
+.cart{
+    padding: 0px 10px 0px 10px;
+}
+.btn-grp{
+    display: flex;
+    justify-content: center;
+}
+.btn-grp button{
+   
+    height: 2.5rem;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.btn-login{
+    color: var(--color-gray-500);
+    background-color: transparent;
+    border: 1px solid #2d2f31;
+    min-width: 5rem;
+    cursor: pointer;
+}
+.btn-login a{
+    text-decoration: none;
+    color: #2d2f31;
+}
+.btn-sing-in a{
+    text-decoration: none;
+    color:white;
+}
+.btn-login:hover{
+    color: var(--color-gray-500);
+    background-color: rgba(23,57,83,.12);
+}
+.btn-sing-in{
+    color: white;
+    border: 1px solid #2d2f31;
+    min-width: 5rem;
+    cursor: pointer;
+    background-color:rgb(44, 43, 43)
+}
+.btn-ineternet{
+    color: var(--color-gray-500);
+    background-color: transparent;
+    border: 1px solid #2d2f31;
+    /* min-width: 5rem; */
+    cursor: pointer;
+    
+}
+.btn-ineternet:hover{
+    color: var(--color-gray-500);
+    background-color: rgba(23,57,83,.12);
+}
+.mydiv{
+    border: 2px solid black;
+}
+.dropDown{
+   
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    min-height: 60vh;
+    display: flex;
+    z-index: 2;
+    color: black;
+    box-shadow: 0px 0.5px 2px;
+    display: flex;
+}
+.drop-down-list a{
+    color: black;
+    text-decoration: none;
+}
+.sub-drop-down-list a{
+    color: black;
+    text-decoration: none;
+}
+.drop-down-list{
+    background-color: white;
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    /* box-sizing: border-box; */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-evenly;
+}
+
+.sub-drop-down-list{
+    height: 465px;
+    background-color: white;
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 70px;
+    left:218px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+
+}
+.drop-down-list,.sub-drop-down-list div  {
+    padding: 7px;
+    width: 200px;
+    padding-left: 20px;
+   
+}
+.drop-down-list a:hover{
+ color:#5624d0;;
+}
+.parent-item{
+    display: flex;
+    justify-content: space-between;
+}

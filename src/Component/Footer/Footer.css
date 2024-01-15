@@ -1,0 +1,59 @@
+/* footer */
+.footer {
+    background-color: rgb(27, 26, 26);
+    
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.footer-container{
+    width: 100%;
+    /* border: 2px solid white; */
+    /* margin-left: 3%; */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: space-between;
+    padding: 5px;
+}
+.link-container{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    padding: 10px;
+    /* border: 1px solid white; */
+}
+
+.footerbutton {
+    
+    border: 1px solid white;
+    height: 30px;
+    padding: 5px 20px;
+    margin: 10px 10px 0 0;
+}
+
+.langbut {
+    background-color: inherit;
+    outline: none;
+    /* border: 2px solid white; */
+    color: white;
+    font-size: large;
+    margin-left: 5px;
+    padding-right: 10px;
+}
+
+.footerlogo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: white;
+    padding: 0 50px;
+
+}
+.footerlogo div img{
+    width: 100px;
+}
+
+
