@@ -9,6 +9,7 @@ import CoursesPage from './Component/CoursesPage/CoursesPage';
 import { useEffect } from 'react';
 import { setData } from './Component/store/coursesSlice';
 import { useDispatch} from 'react-redux';
+import Cart from './Component/Cart/Cart';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,8 +38,8 @@ function App() {
           <Route path='/register' element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/course/:name" element={<CoursesPage/>}></Route>
-          {/* <Route path='/cart' element={<CartPage />}></Route>
-          <Route path='/search' element={<SearchPage />}></Route>
+          <Route path='/cart' element={<Cart />}></Route>
+          {/* <Route path='/search' element={<SearchPage />}></Route>
           <Route path='/mylearn' element={<Mylearning />}></Route> */}
         </Routes>
       </BrowserRouter>

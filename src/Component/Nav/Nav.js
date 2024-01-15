@@ -75,7 +75,8 @@ function Nav() {
             Teach on Udemy
         </div>
         <div className='cart'> 
-       <img src={cart} alt='cart'/>
+        <Link to={'/cart'}><img src={cart} alt='cart'/></Link>
+       
         </div>
         <div className='btn-grp'>
             <button className='btn-login'><Link to={'/login'}>Login</Link></button>
