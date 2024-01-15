@@ -203,8 +203,8 @@ function Home() {
         
        
       </div>
-      <div className="instructor">
-        <div className="instructor-img">
+      <div className="instructor-container">
+        <div className="instructor-img-div">
           <img
             src="https://s.udemycdn.com/home/non-student-cta/instructor-1x-v3.jpg"
             alt="not found"

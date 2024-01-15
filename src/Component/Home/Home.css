@@ -86,15 +86,21 @@ ul {
     color:rgb(22, 22, 179);
     font-weight: bold;
   }
-  .instructor{
+  .instructor-container{
+    height: 500px;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     flex-wrap: wrap;
-    gap: 100px;
+    max-width: 900px;
+    margin: auto;
+    /* gap: 100px; */
    
   }
-  .instructor-img{
+  .instructor-img-div{
+    /* border: 1px solid black; */
     width: 400px;
   }
   .instructor-discription{
