@@ -3,9 +3,12 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import axios from "axios";
 import "./LoginSignup.css";
-// import { jwtDecode } from "jwt-decode";
+import jwt_decode from 'jwt-decode';
+import { setUsername } from '../store/userSlice';
+import { useDispatch} from 'react-redux';
 
 function Register() {
+  const dispatch=useDispatch()
   const navigate = useNavigate();
   const [data, setData] = useState({
     name: "",
@@ -27,10 +30,16 @@ function Register() {
       console.log(data);
       axios.post("https://udemy-server-i52o.onrender.com/register", data) 
       .then((res) => {
-          console.log(res.data);
+          console.log(res.data.token);
+          localStorage.setItem('token', res.data.token);
           alert(res.data.msg);
           // alert("Please login!");
           navigate("/");
+          localStorage.setItem("token", res.data.token);
+          const decoded = jwt_decode(res.data.token);
+          console.log("token decode",decoded)
+          dispatch(setUsername(decoded.name))
+          
       })
       .catch(err => console.log(err));
   setData({ name: "", email: "", password: "" });

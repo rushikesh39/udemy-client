@@ -166,3 +166,18 @@
     display: flex;
     justify-content: space-between;
 }
+.user-info{
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+}
+.f-later{
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}

@@ -6,8 +6,12 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import "./LoginSignup.css"
+import jwt_decode from 'jwt-decode';
+import { setUsername } from '../store/userSlice';
+import { useDispatch} from 'react-redux';
 
 function Login() {
+    const dispatch=useDispatch()
     const [data, setData] = useState({
         email: "",
         password: ""
@@ -27,11 +31,15 @@ function Login() {
             console.log(data);
             axios.post("https://udemy-server-i52o.onrender.com/login", data) 
             .then((res) => {
-                console.log(res.data.msg)
+                console.log(res.data.token)
                 alert(res.data.msg);
-                if (res.data.msg === "User Logged in Successfully!") {
+                if (res.data.msg === "Success") {
                     localStorage.setItem("token", res.data.token);
-                    console.log(res.data.userdetail)
+                    const decoded = jwt_decode(res.data.token);
+                    console.log("token decode",decoded)
+                    dispatch(setUsername(decoded.name))
+                    
+                    
                     navigate("/");
                     // window.location.reload(true)
                 }

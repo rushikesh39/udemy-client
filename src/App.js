@@ -10,11 +10,12 @@ import { useEffect } from 'react';
 import { setData } from './Component/store/coursesSlice';
 import { useDispatch} from 'react-redux';
 import Cart from './Component/Cart/Cart';
+import jwt_decode from 'jwt-decode';
+import { setUsername } from './Component/store/userSlice';
+
 
 function App() {
   const dispatch = useDispatch();
-  
-
   useEffect(() => {
     const fetchDataFromAPI = async () => {
       try {
@@ -28,6 +29,19 @@ function App() {
 
     fetchDataFromAPI();
   }, [dispatch]);
+  const token = localStorage.getItem('token');
+  console.log("token",token)
+  useEffect(() => {
+    if (token) {
+      try {
+        const decoded = jwt_decode(token);
+        console.log("token decode",decoded)
+        dispatch(setUsername(decoded.name))
+      } catch (error) {
+        console.error('Error decoding token:', error);
+      }
+    }
+  }, [token,dispatch]);
   return (
     <div className="App">
       <BrowserRouter>
