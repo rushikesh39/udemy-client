@@ -104,12 +104,17 @@
     font-weight: bold;
     margin: 5px;
 }
-.popular-instructor h2{
+.popular-instructor-container h2{
     margin: 20px 0;
 
 }
-.instructor-container{
+.popular-instructor-container {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.instructor-container-box{
     /* border: 1px solid black; */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5%;

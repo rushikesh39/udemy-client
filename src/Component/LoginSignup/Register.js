@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import axios from "axios";
 import "./LoginSignup.css";
 import jwt_decode from 'jwt-decode';
-import { setUsername } from '../store/userSlice';
+import { setUserinfo} from '../store/userSlice';
 import { useDispatch} from 'react-redux';
 
 function Register() {
@@ -38,7 +38,7 @@ function Register() {
           localStorage.setItem("token", res.data.token);
           const decoded = jwt_decode(res.data.token);
           console.log("token decode",decoded)
-          dispatch(setUsername(decoded.name))
+          dispatch(setUserinfo(decoded))
           
       })
       .catch(err => console.log(err));

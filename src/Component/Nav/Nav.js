@@ -5,13 +5,14 @@ import cart from "./cart.png";
 import net from "./net.png";
 import { Category, SubCategory } from "./CategoriesData";
 import { Link, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector ,useDispatch} from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
-
+import { removeUserinfo } from "../store/userSlice";
+import { useNavigate } from "react-router-dom";
 function Nav() {
-  const username = useSelector((state) => state.user.username);
-  console.log("username", username);
+  const {userinfo} = useSelector((state) => state.user);
+  console.log("username", userinfo);
   console.log(Category, "category", SubCategory);
   const [DropDown, setDropDown] = useState(false);
   const [selectCategory, setSelectCategory] = useState(0);
@@ -24,6 +25,13 @@ function Nav() {
   };
   console.log(Category);
   const token = localStorage.getItem("token");
+  const dispatch=useDispatch()
+  const navi=useNavigate()
+  const logout=()=>{
+    localStorage.removeItem('token');
+    dispatch(removeUserinfo())
+    navi("/")
+  }
   return (
     <div className="ud-header">
       <div className="logo">
@@ -86,13 +94,65 @@ function Nav() {
           <img src={cart} alt="cart" />
         </Link>
       </div>
-      {token ? (
+      {userinfo && token ? (
+        <>
         <div className="user-info">
           <div>
             <FontAwesomeIcon icon={faBell} size="lg" />
           </div>
-          <div className="f-later">{username.charAt(0).toUpperCase()}</div>
+          <div className="f-later">{userinfo.name.charAt().toUpperCase()}</div>
+         
         </div>
+         <div className="user-details">
+          <div className="user-popup-info">
+            <div className="user-f-circle">{userinfo.name.charAt().toUpperCase()}</div>
+            <div className="user-popup-details">
+            <p><b>{userinfo.name}</b></p>
+            <p>{userinfo.email}</p>
+            </div>
+          </div>
+          <hr/>
+          <div>
+            <p>My learning</p>
+            <p>My Cart</p>
+            <p>Watchlist</p>
+            <p>Tech on Udemy</p>
+          </div>
+          <hr/>
+          <div>
+            <p>Notification</p>
+            <p>Messages</p>
+          </div>
+          <hr/>
+          <div>
+            <p>Account Setting</p>
+            <p>Payment Method</p>
+            <p>Subscription</p>
+            <p>Udemy credit</p>
+            <p>Purchase History</p>
+          </div>
+          <hr/>
+          <div>
+            <p>Language</p>
+          </div>
+          <hr/>
+          <div>
+            <p>Public Profile</p>
+            <p>Edit Profile</p>
+          </div>
+          <hr/>
+          <div>
+            <p>Help</p>
+            <p onClick={logout}>Log out</p>
+          </div>
+          <hr/>
+          <div>
+            <p><b>Udemy Business</b></p>
+            <p>Bring learning to your company</p>
+          </div>
+
+         </div>
+         </>
       ) : (
         <div className="btn-grp">
           <button className="btn-login">

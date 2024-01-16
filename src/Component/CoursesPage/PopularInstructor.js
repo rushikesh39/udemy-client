@@ -38,9 +38,9 @@ const PopularInstructor = () => {
       ];
   return (
     <>
-      <div className="popular-instructor">
+      <div className="popular-instructor-container">
           <h2>Popular Instructors</h2>
-          <div className="instructor-container">
+          <div className="instructor-container-box">
             {instructors.map((item, index) => {
               return (
                 <div className="instructors" key={index}>

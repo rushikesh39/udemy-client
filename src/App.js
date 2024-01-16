@@ -11,7 +11,7 @@ import { setData } from './Component/store/coursesSlice';
 import { useDispatch} from 'react-redux';
 import Cart from './Component/Cart/Cart';
 import jwt_decode from 'jwt-decode';
-import { setUsername } from './Component/store/userSlice';
+import { setUserinfo } from './Component/store/userSlice';
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
       try {
         const decoded = jwt_decode(token);
         console.log("token decode",decoded)
-        dispatch(setUsername(decoded.name))
+        dispatch(setUserinfo(decoded))
       } catch (error) {
         console.error('Error decoding token:', error);
       }

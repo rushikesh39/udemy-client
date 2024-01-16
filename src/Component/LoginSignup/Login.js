@@ -7,7 +7,7 @@ import { FaApple } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import "./LoginSignup.css"
 import jwt_decode from 'jwt-decode';
-import { setUsername } from '../store/userSlice';
+import { setUserinfo} from '../store/userSlice';
 import { useDispatch} from 'react-redux';
 
 function Login() {
@@ -21,6 +21,7 @@ function Login() {
         setData({ ...data, [event.target.name]: event.target.value })
     }
     const handleSubmit = (e) => {
+        console.log("login...")
         e.preventDefault();
         if (!data.email || !data.email.includes("@")) {
             alert("Enter a valid email address!!");
@@ -37,7 +38,7 @@ function Login() {
                     localStorage.setItem("token", res.data.token);
                     const decoded = jwt_decode(res.data.token);
                     console.log("token decode",decoded)
-                    dispatch(setUsername(decoded.name))
+                    dispatch(setUserinfo(decoded))
                     
                     
                     navigate("/");
@@ -45,7 +46,7 @@ function Login() {
                 }
             })
             .catch(err => console.log(err));
-        setData({ email: "", pass: "" })
+        setData({ email: "", password: "" })
         }
     }
     return (
