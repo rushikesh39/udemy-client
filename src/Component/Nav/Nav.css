@@ -173,8 +173,8 @@
 }
 .f-later{
     background-color: black;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     color: white;
     display:flex;
     justify-content: center;
@@ -186,7 +186,7 @@
     /* height: 500px; */
     border: 1px solid rgb(164, 156, 156);
     position: absolute;
-    top: 60px;
+    top: 50px;
     right: 20px;
     background-color: white;
     z-index: 100;
