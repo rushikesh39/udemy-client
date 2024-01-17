@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,13 +6,17 @@ import Rating from "../CoursesPage/Rating";
 import { deleteItem } from "../store/cartSlice";
 import axios from "axios";
 import "./Cart.css";
+import { loadStripe } from "@stripe/stripe-js";
+
+
 function Cart() {
-  const [toggle, setToggle] = useState(false);
+  
   const navigator = useNavigate();
   const token = localStorage.getItem("token");
   console.log("token:",token)
   const dispatch = useDispatch();
   const itemsInCart = useSelector((state) => state.cart.itemsInCart);
+  
   const totalAmt = useSelector((state) => state.cart.totalAmount);
   const navigate = () => {
     navigator("/");
@@ -20,9 +24,40 @@ function Cart() {
   const handleDelete = (item) => {
     dispatch(deleteItem(item));
   };
-  const buynow = () => {
+  const buynow = async () => {
     alert("Proceed to Payment!");
-    setToggle(!toggle);
+    
+
+    try{
+      
+      const stripe = await loadStripe('pk_test_51OFa7xSI55uByng4QDyDPgrBXyjuhIwSSoV3jedpIhWA8w4930eNQp6kud38l7o6tNyNXxWeaVoU5IoPlz7rChVg00MkbRUNtp');
+  
+      const body={
+        products:itemsInCart
+      }
+      const headers={
+        "Content-Type":"application/json"
+      }
+      const response=await fetch("https://udemy-server-i52o.onrender.com/api/create-checkout-session",{
+        method:"POST",
+        headers:headers,
+        body:JSON.stringify(body),
+      })
+      const session=await response.json()
+  
+      const result=stripe.redirectToCheckout({
+        sessionId:session.id
+      })
+      if(result.error){
+        console.log(result.error)
+      }
+  
+      }
+      catch(e){
+        console.log("error",e)
+      }
+  
+    
   };
   useEffect(() => {
     if (token) {
@@ -101,21 +136,12 @@ function Cart() {
               <div className="totaldiv">
                 <h3>Total:</h3>
                 <h1>₹{totalAmt}</h1>
-                {!toggle ? (
+                
                   <button onClick={buynow} className="checkout_but">
                     Checkout
                   </button>
-                ) : (
-                  ""
-                )}
-                {/* {toggle ? (
-                  <PaypalPayment
-                    cartData={itemsInCart}
-                    totalAmount={totalAmt}
-                  />
-                ) : (
-                  ""
-                )} */}
+                
+          
                 <hr />
                 <h4>Promotions</h4>
                 <input

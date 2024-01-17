@@ -96,7 +96,7 @@ ul {
     flex-wrap: wrap;
     max-width: 900px;
     margin: auto;
-    /* gap: 100px; */
+    gap: 100px;
    
   }
   .instructor-img-div{
