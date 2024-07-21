@@ -1,0 +1,366 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    background: #fff;
+    height: 5rem;
+    padding: 0 2.4rem;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    && .logo{
+        width: 80px;
+    }
+}
+
+nav{
+    position: relative;
+    font-weight: 400;
+    font-size: 0.9em;
+    
+
+    && .dropDownButton{
+        background: transparent;
+        border: none;
+        margin: 35px 10px;
+        /* margin-bottom: 50px; */
+    }
+    
+    && .dropDown {
+        background-color: white;
+        position: absolute;
+        left: -1em;
+        min-height: 60vh;
+        display: flex;
+        z-index: 2;
+        color: black;
+        box-shadow: 0px 0.5px 2px;
+        display: flex;
+        && .parent, .child{
+            padding: 1em 1.5em;
+            border-right: 1px solid #d1d7dc;
+
+            & a{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 12em;
+                margin-bottom: 1em;
+                &:hover{
+                    color: #5624d0;
+                }
+            }
+        }
+    }
+}
+.navbar {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0.5px 10px;
+}
+
+.udemylogo_div {
+    /* border: 2px solid red; */
+    width:100px;
+    padding: 15px 12px 12px 17px;
+}
+
+.searchbar_div {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 50px;
+    margin: 0px 10px 0px 20px;
+    box-sizing: border-box;
+    /* margin-top: 5%; */
+    /* width: 47%; */
+    flex-grow: 1;
+    border-radius: 25px;
+
+}
+
+.searchbar_div input {
+    padding: 1%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 25px;
+    /* padding: 1%; */
+}
+
+.searchbar_div button {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.searchbar:focus {
+    outline: none;
+}
+
+.navbar_mainfont {
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.heartlogo {
+    /* border: 2px solid red; */
+    align-content: center;
+    padding-top: 1.6%;
+}
+
+.cartlogo {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 3%;
+    
+}
+
+.itemscartcount_round {
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: white;
+    position: absolute;
+    width:20px;
+    height: 20px;
+    font-size: small;
+    font-weight: bold;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    /* padding-top: 2px; */
+}
+
+.usernav {
+    margin-right: 3%;
+    width: 3%;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+.profilediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 33px;
+    height: 33px;
+   
+    background-color: #333;
+}
+
+.logroute {
+    position: absolute;
+    width: 7%;
+    background-color: white;
+    border: 2px solid black;
+    top: 9.5%;
+    right: 2%;
+    z-index: 10;
+}
+
+.logroute h5 {
+    margin: 20px;
+}
+
+.spanclass {
+    display: inline-block;
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    /* border: 2px solid red; */
+}
+
+.navbar_cat {
+    /* border: 2px solid black; */
+    /* padding-top: 0.5%; */
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+}
+
+.butdiv_nav {
+    /* width: 13%; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.globe_nav {
+    border: 1px solid black;
+    height: 5vh;
+    margin-top: 9%;
+}
+
+.logbut_nav {
+    border: 1px solid black;
+    /* width: 100px; */
+    /* height: 40px; */
+    padding: 8px 10px;
+    width: 70px;
+    margin-left: 5px;
+    /* width: 25%; */
+   
+    text-align: center;
+    /* width: 45%; */
+    /* padding-left: 2%; */
+    /* padding: 2px 10px 2px 10px; */
+    cursor: pointer;
+    /* box-sizing: border-box; */
+}
+
+.signupbut {
+    background-color: black;
+    color: white;
+}
+
+.logbut_nav h5 {
+    /* border: 2px solid black; */
+    /* margin-top: 13%; */
+    /* margin-left: 4%; */
+    /* margin: auto;
+    padding-top: 10%;
+    width: fit-content; */
+}
+
+.logbut_nav:hover {
+    background-color: rgb(211, 207, 207, 0.5);
+}
+
+.signupbut:hover {
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.subroute {
+    background-color: white;
+    position: fixed;
+    top: 9.5%;
+    height: 80vh;
+    /* width: 15%; */
+    /* width: 20%; */
+    display: flex;
+    z-index: 2;
+    color: black;
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* border-radius: 10px; */
+}
+
+.subsub {
+    background-color: white;
+    border: 1px solid black;
+    position: fixed;
+    top: 9.5%;
+    left: 25%;
+    height: 80vh;
+    box-sizing: border-box;
+}
+
+.subroutenav {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    /* border: 2px solid red; */
+}
+
+.subroutenav:hover {
+    color: blueviolet;
+}
+
+.subroutename {
+    /* border: 2px solid black; */
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-weight: 400;
+}
+
+.submargin {
+    margin: 3%;
+}
+
+.catsymb {
+    /* border: 2px solid red; */
+    float: right;
+    margin: 3% 5% 3% 3%;
+}
+/* mobile nav */
+.mobile-nav-container{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid gray;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+}
+.cart-search{
+    display: flex;
+    width: 60%;
+}
+.mobile-nav-container .logo{
+    width: 80px;
+}
+.mobile-dropdown{
+    border: 1px solid gray;
+    width: 280px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    z-index: 100;
+    
+}
+
+.mobile-dropdown a{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+.mobile-dropdown h4{
+    color:gray;
+    padding: 5px;
+}
+.userinfo a{
+    color: #5624d0;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+.cross-btn{
+    position: absolute;
+    top: 10px;
+    left: 290px;
+    /* padding: 5px; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: large;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+.menu{
+    background-color: #e5eaee;
+    /* font-weight: bold; */
+    padding: 10px;
+    word-spacing: 30px;
+}
+.mobile-dropdown .child a{
+    padding: 10px 10px;
+}
+/* media query */
+@media (max-width:800px) {
+    .mobile-nav-container{
+        display: flex;
+    }
+    header{
+        display: none;
+    }
+}

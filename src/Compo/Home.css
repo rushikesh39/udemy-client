@@ -1,0 +1,279 @@
+
+
+/* Image Carousel */
+.banner img{
+    width: 100vw;
+}
+.image-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* margin-top: 10px; */
+    margin: auto;
+    /* border: 2px solid red; */
+    height: 55vh;
+    width: 88%;
+}
+
+.image-carousel img {
+    width: 100%;
+    height: 100%;
+    /* You can adjust the maximum height as needed */
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    /* background-color: rgba(140, 234, 140, 0.4); */
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-button:hover {
+    background-color: #333;
+}
+
+.carousel-button.prev {
+    left: 1%;
+}
+
+.carousel-button.next {
+    right: 1%;
+}
+
+/* trusted by div */
+.trustedby_div {
+    width: 100%;
+    background-color: rgb(249, 247, 250);
+    margin: auto;
+    height: 33vh;
+}
+
+.trustedh5 {
+    /* border: 2px solid red; */
+    padding-top: 4%;
+    font-size: larger;
+    font-weight: 500;
+    color: rgb(109, 107, 110);
+}
+
+.imgfil {
+    width: 100%;
+    height: 100%;
+}
+
+.mainbrandsimg_div {
+    /* border: 2px solid black; */
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.brandsimg_div {
+    /* border: 2px solid black; */
+    /* width: 10%; */
+    height: 6vh;
+}
+
+.learners_div {
+    background-color: rgb(249, 247, 250);
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+
+.learnh2 {
+    text-align: left;
+    margin-left: 6%;
+    margin-bottom: 2%;
+}
+
+.mainlearnercard_div {
+    /* border: 2px solid black; */
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5px;
+    /* width: 1000px;    */
+}
+
+.learnercard_div {
+    border: 1px solid rgb(178, 175, 175);
+    width: 300px;
+    background-color: white;
+    padding: 25px;
+    text-align: left;
+    margin: 5px;
+}
+
+.imgdouble {
+    width: 5%;
+}
+
+.learnertext {
+    font-size: 1.05em;
+}
+
+.learnertext span {
+    font-weight: bolder;
+}
+
+.profile_learner {
+    display: flex;
+    margin-bottom: 8%;
+}
+
+.h4profilename {
+    /* border: 2px solid black; */
+    margin: 0% 0% 0% 2%;
+}
+
+.profileround {
+    border-radius: 50%;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.profileround h5 {
+    margin: 0px 0px 0px 5px;
+    padding-top: 20%;
+    color: white;
+}
+
+.flexy {
+    display: flex;
+}
+
+.playspan {
+    /* border: 2px solid black; */
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(22, 22, 210);
+}
+
+/* become instructor div */
+.becomeinstruc_div {
+    width:100%;
+    /* border: 2px solid black; */
+    margin: auto;
+    /* position: relative; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+     
+}
+
+.becomeinstruc_imgdiv {
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid black; */
+    margin:10px;
+}
+
+.becomeinstruc_contentdiv {
+    /* border: 2px solid black; */
+    /* margin-right: 5%; */
+    text-align: left;
+    width:30vw;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 100px;
+    
+    /* position: absolute;
+    top: 15%;
+    left: 55%; */
+}
+
+.becomeinstruc_contentdiv p {
+    font-size: large;
+    font-weight: 400;
+}
+
+.becomeinstruc_contentdiv button {
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.offer{
+    padding: 10px;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    left: 10%;
+    top: 8rem;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    background: #fff;
+    width: 100vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:x-large;
+}
+.offer h1{
+    padding: 0;
+    margin: 0;
+}
+.brand-container{
+    background-color: #f7f9fa;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 5px;
+    
+}
+.brand-container p{
+    color: rgb(65, 62, 62);
+    margin-bottom: 30px;
+    font-size: x-large;
+}
+.brand-list{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+ul {
+    list-style-type: none;
+  }
+  @media (max-width:800px) {
+    .offer{
+        left: 5%;
+        top:5rem;
+        font-size: small;
+        width: 200px;
+    }
+    .becomeinstruc_div{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .becomeinstruc_contentdiv{
+        width: 80%;
+    }
+  }

@@ -1,0 +1,78 @@
+/* footer */
+.footer {
+    background-color: rgb(27, 26, 26);
+    
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.footer_Upperdiv {
+    width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: left; */
+    justify-content: space-between;
+    /* align-items: center; */
+    /* align-content: center; */
+    padding: 5px;
+    gap: 10px;
+    /* border: 10px solid rgb(208, 200, 215); */
+}
+.footer_Upperdiv div{
+    width: 200px;
+    /* border: 2px solid white; */
+    padding: 5px;
+    margin: 5px;
+   
+}
+
+.footer_Upperdiv p {
+    margin-bottom: 0;
+}
+
+.footerbutton {
+    /* position: absolute; */
+    /* top: 10%;
+    right: 3%; */
+    border: 1px solid white;
+    height: 40px;
+    padding: 5px;
+    margin: 10px 10px 0 0;
+}
+
+.langbut {
+    background-color: inherit;
+    outline: none;
+    /* border: 2px solid white; */
+    color: white;
+    font-size: large;
+    margin-left: 5px;
+    padding-right: 10px;
+}
+
+.footerlogo {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid white; */
+    padding: 5px;
+    /* margin-top: 10px;
+    
+    margin-left: 2%; */
+}
+.footerlogo .udemylogo {
+    width: 200px;
+}
+.copyrights {
+    color: white;
+    font-size: small;
+}
+@media (max-width:679px) {
+    .footer_Upperdiv{
+        justify-content: center;
+    }
+}
+
