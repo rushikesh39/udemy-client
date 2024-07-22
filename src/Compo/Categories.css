@@ -65,15 +65,14 @@
 .mostpop_div {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3%;
-    /* border: 2px solid red; */
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
 }
 
 .mostitem_div {
-    /* border: 2px solid black; */
-    margin-right: 1%;
-    height: 45vh;
-    width: 18.4%;
+    width:300px;
+    height: 330px;
     position: relative;
 }
 
@@ -107,6 +106,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 10px;
     /* border: 2px solid black; */
     margin:20px 0;
 }
@@ -125,16 +125,19 @@
 
 }
 .popinstruc_maindiv {
-    /* border: 1px solid black; */
+   
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5%;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+
 }
 
 .popinstruc_main {
     display: flex;
     border: 1px solid black;
-    width: 24%;
+    width: 400px;
     padding-bottom: 1%;
 }
 
@@ -350,6 +353,12 @@
     /* border: 1px solid black; */
     justify-content: space-between;
 }
+@media (max-width:555px) {
+    .popmain_div{
+        justify-content: center;
+    }
+}
+
 
 .addtocart {
     width: 200px;
