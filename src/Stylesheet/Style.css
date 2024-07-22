@@ -259,12 +259,12 @@ body {
         flex-wrap: wrap;
         margin-bottom: 3%;
     }
-
+/* 
     .item_imgdiv {
         border: 1px solid black;
         width: 30%;
         height: 12vh;
-    }
+    } */
 
     .item_maindiv {
         display: flex;
