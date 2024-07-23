@@ -71,7 +71,7 @@
 }
 
 .mostitem_div {
-    width:300px;
+    width:260px;
     height: 330px;
     position: relative;
 }
@@ -127,8 +127,8 @@
 .popinstruc_maindiv {
    
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content:center;
+    gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
 
@@ -137,8 +137,9 @@
 .popinstruc_main {
     display: flex;
     border: 1px solid black;
-    width: 400px;
-    padding-bottom: 1%;
+    width: 330px;
+    padding: 5px;
+    
 }
 
 .imginstruc_div {
@@ -214,19 +215,25 @@
     width: 75%;
     /* border: 2px solid green; */
 }
-
+.allcourses_div h2{
+    margin-bottom: 20px;
+}
 .item_maindiv {
     display: flex;
     position: relative;
     /* border: 2px solid brown; */
     min-height: 20vh;
     margin-bottom: 2%;
+    font-size: small;
 }
 
 .item_imgdiv {
     /* border: 1px solid black; */
     width: 30%;
     /* height: 20vh; */
+}
+.item_imgdiv img{
+    height: auto;
 }
 
 .item_contentdiv {
